@@ -20,47 +20,56 @@
 
 <title>Online Shopping - Home</title>
 
-<!-- Bootstrap core CSS -->
-<link href="${css}/bootstrap.min.css" rel="stylesheet">
+<script>
+	window.menu = '${title}';
+</script>
 
+<!-- Bootstrap core CSS -->
+<link href="${css}/bootstrap.min.css" rel="stylesheet" />
+<link href="${css}/bootstrap.css" rel="stylesheet" />
 <!-- Custom styles for this template -->
-<link href="${css}/myApp.css" rel="stylesheet">
+<link href="${css}/myApp.css" rel="stylesheet" />
 
 </head>
 
-<body>
+<body style="padding-top:0;">
 
-	<!-- Navigation -->
-	<%@include file="./shared/navbar.jsp"%>
+	<div class="wrapper">
+		<!-- Navigation -->
+		<%@include file="./shared/navbar.jsp"%>
 
-	<!-- Page Content -->
-	<!-- Loading the home content -->
-	<c:if test="${userClickHome == true}">
-		<%@include file="./shared/pagecontent.jsp"%>
-	</c:if>
+		<!-- Page Content -->
+		<!-- Loading the home content -->
+		<div class="content">
+			<c:if test="${userClickHome == true}">
+				<%@include file="./shared/pagecontent.jsp"%>
+			</c:if>
 
-	<c:if test="${userAbout == true}">
-		<%@include file="./shared/about.jsp"%>
-	</c:if>
+			<c:if test="${userAbout == true}">
+				<%@include file="./shared/about.jsp"%>
+			</c:if>
 
-	<c:if test="${userlistOfProducts == true}">
-		<%@include file="./shared/Products.jsp"%>
-	</c:if>
+			<c:if test="${userlistOfProducts == true}">
+				<%@include file="./shared/Products.jsp"%>
+			</c:if>
 
-	<c:if test="${userContact == true}">
-		<%@include file="./shared/contact.jsp"%>
-	</c:if>
+			<c:if test="${userContact == true}">
+				<%@include file="./shared/contact.jsp"%>
+			</c:if>
+		</div>
 
-	<!-- /.container -->
+		<!-- /.container -->
 
-	<!-- Footer -->
-	<%@include file="./shared/footer.jsp"%>
+		<!-- Footer -->
+		<%@include file="./shared/footer.jsp"%>
 
+	</div>
 	<script src="${js}/jquery.js"></script>
 
 	<!-- Bootstrap core JavaScript -->
 
 	<script src="${js}/bootstrap.min.js"></script>
+	<script src="${js}/myApp.js"></script>
 
 </body>
 

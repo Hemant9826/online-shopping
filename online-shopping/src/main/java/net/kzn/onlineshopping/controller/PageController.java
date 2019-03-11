@@ -20,7 +20,7 @@ public class PageController {
 	@RequestMapping(value = {"/about"})
 	public ModelAndView about() {
 		ModelAndView mv = new ModelAndView("home");
-		mv.addObject("title", "Home");
+		mv.addObject("title", "about");
 		mv.addObject("userAbout", true);
 		return mv;
 	}
@@ -28,7 +28,7 @@ public class PageController {
 	@RequestMapping(value = {"/listproducts"})
 	public ModelAndView listProduct() {
 		ModelAndView mv = new ModelAndView("home");
-		mv.addObject("title", "Home");
+		mv.addObject("title", "products");
 		mv.addObject("userlistOfProducts", true);
 		return mv;
 	}
@@ -36,7 +36,7 @@ public class PageController {
 	@RequestMapping(value = {"/contact"})
 	public ModelAndView contact() {
 		ModelAndView mv = new ModelAndView("home");
-		mv.addObject("title", "Home");
+		mv.addObject("title", "contacts");
 		mv.addObject("userContact", true);
 		return mv;
 	}
